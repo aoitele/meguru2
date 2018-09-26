@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  db:
+    image: mysql
+    volumes:
+      - /Users/aoitele/Desktop/meguru:/home
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      TZ: Asia/Tokyo
+
+  app:
+    image: rails
+    build:
+      context: .
+      dockerfile: Dockerfile-rails
+    stdin_open: true
+    tty: true
+    volumes:
+      - /Users/aoitele/Desktop/meguru:/home
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "3000:3000"
+    links:
+      - db:db
