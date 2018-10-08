@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'main/index'
+  resources :comments
+  get 'comments/new'
+  post 'comments/new' => "comments#show"
+
+  get 'main/map', to: 'main#map'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root to:'main#index'
+root to:'comments#new'
 
 end
