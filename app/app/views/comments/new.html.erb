@@ -1,5 +1,6 @@
 <%= form_with model: @comment, local: true  do |form| %>
   <%= form.text_area :content %><br>
+  <%= form.text_area :message %><br>
   <%= form.file_field :image %><br>
   <%= form.submit %>
 <% end %>

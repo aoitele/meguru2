@@ -10,6 +10,9 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @image = @comment.image
+    # @image_data = MiniMagick::Image.open(@image)
+    # @properties = @image_data.details.fetch("Properties", :not_found)
   end
 
   def edit
@@ -22,9 +25,10 @@ class CommentsController < ApplicationController
     redirect_to @comment
   end
 
-  private
-    def comment_params
-      params.require(:comment).permit(:title, :content, image:[])
-    end
+  # private
+  #   def comment_params
+  #     params.require(:comment).permit(:title, :content, image:[])
+  #   end
+
 
 end

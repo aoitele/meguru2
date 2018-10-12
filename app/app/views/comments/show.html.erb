@@ -3,9 +3,10 @@
 
   <div>
     <p>画像のメタデータをここに表示</p>
-      <li>コメント：<%= @comment.content %></li>
-      <li>撮影日時：<%= @comment.created_at %></li>
-      <li>場所：<%= @comment.image.lat %></li>
-  </div>
-
+      <li>content：<%= @comment.content %></li>
+      <li>message：<%= @comment.image.record_id %></li>
+      <li>created_at：<%= @comment.created_at %></li>
+      <li>テスト：<%= @comment.image.byte_size %></li>
+      <li>緯度：<%= @properties.fetch("exif:GPSLatitude", :not_found) %></li>
+      <li>経度：<%= @properties.fetch("exif:GPSLongitude", :not_found) %></li>
 <% end %>
