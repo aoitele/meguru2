@@ -3,6 +3,7 @@ class MainController < ApplicationController
   end
 
   def map
+
   end
 
   def show

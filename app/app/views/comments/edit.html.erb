@@ -1,0 +1,8 @@
+<% if @comment.image.attached? %>
+  <%= image_tag @comment.image.variant(resize: "200x200") %>
+
+  <div>
+    <p>投稿データを削除しますか？</p>
+      <button>削除する</button>
+
+<% end %>

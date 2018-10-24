@@ -6,7 +6,11 @@
       <li>content：<%= @comment.content %></li>
       <li>message：<%= @comment.image.record_id %></li>
       <li>created_at：<%= @comment.created_at %></li>
-      <li>テスト：<%= @comment.image.byte_size %></li>
+      <li>bytesize：<%= @comment.image.byte_size %></li>
       <li>緯度：<%= @properties.fetch("exif:GPSLatitude", :not_found) %></li>
       <li>経度：<%= @properties.fetch("exif:GPSLongitude", :not_found) %></li>
+
+
+      <li>イメージの中身：<%= @comment.image %></li>
+
 <% end %>

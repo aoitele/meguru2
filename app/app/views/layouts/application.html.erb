@@ -9,7 +9,70 @@
   </head>
 
   <body>
+
+<!-- ナビゲーションバー -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="assets/meguru.png">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            ホーム
+          </a>
+
+          <a class="navbar-item">
+            ピックアップ
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Meguruについて
+              </a>
+              <a class="navbar-item">
+                使い方
+              </a>
+              <a class="navbar-item">
+                投稿写真に関するご注意
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                ご意見・ご要望
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>登録</strong>
+              </a>
+              <a class="button is-light">
+                ログイン
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
-    <!-- <%= javascript_pack_tag 'hello_vue' %> -->
+    <%= javascript_pack_tag 'hello_vue' %>
   </body>
 </html>
