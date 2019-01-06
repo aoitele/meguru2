@@ -11,8 +11,6 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
-
-
     @image_data = MiniMagick::Image.open('app/assets/images/test.jpg')
     # @properties = @image_data.details.fetch("Properties", :not_found)
     @properties = @image_data.details.fetch("Properties", :not_found)

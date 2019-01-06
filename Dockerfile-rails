@@ -1,5 +1,5 @@
 # Base image:
-FROM rails:5
+FROM rails
 
 # node.js の環境変数を定義する
 # 本番環境では production
